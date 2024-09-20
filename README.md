@@ -1,24 +1,24 @@
-# README
+# micro-reddit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+From [The Odin Project](https://www.theodinproject.com/lessons/ruby-on-rails-micro-reddit)
 
-Things you may want to cover:
+Let’s build Reddit. Well, maybe a very junior version of it called micro-reddit. In this project, you’ll build the data structures necessary to support link submissions and commenting. We won’t build a front end for it because we don’t need to… you can use the Rails console to play around with models without the overhead of making HTTP requests and involving controllers or views.
 
-* Ruby version
+## schema
 
-* System dependencies
+User:
 
-* Configuration
+- username - string[5,15], primary key, alphanumeric
 
-* Database creation
+Post:
 
-* Database initialization
+- post_id - integer, primary key
+- username - foreign key, not null
+- title - string, not null
+- content - text
 
-* How to run the test suite
+Comment:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- post_id - foreign key
+- username - foreign key
+- content - text
